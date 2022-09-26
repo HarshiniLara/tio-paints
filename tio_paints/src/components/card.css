@@ -1,0 +1,95 @@
+.slick-slide >div{
+    margin: 0 15%;
+    margin-top: 10%;
+    margin-bottom: 18%;
+}
+/* the parent */
+.slick-list {
+    margin: 0 2%;
+}
+.Head{
+    margin-top: 30px;
+    color:#14213D;
+    font-size: 30px;
+    font-weight: bold;   
+}
+.body{
+    text-align: center;
+    /* background-color: #c9d4eb; */
+    background-color: #14213D;
+    height: 100%;
+}
+#card{
+    margin-top: 2em;
+    padding: 1.5em 0.5em 0.5em;
+    border-radius: 2em;
+    text-align: center;
+    background-color: #fff;
+    transition: .3s;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.text{
+    padding-right: 10px;
+    padding-left: 10px;
+    color:#4A4A4A;
+    font-size: 15px;    
+}
+#heading{
+    font-size: 20px;
+    font-weight: bold;
+    color:  #14213D;
+}
+.card:hover{
+    transform: translateY(-60px);
+}
+.img{
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover;
+    outline: 4px solid #14213D;
+}
+.button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 13px;
+}
+#btn{
+  background-color: white;
+  padding: 5px 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 15px;
+  border: 3px solid#14213D;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Inter;
+  text-align: center;
+  color:#14213D;
+}
+#btn:hover{
+    background-color:#14213D;
+    color:#fff;
+}
+@media screen and(min-width:380px) {
+    .card{
+        height: 300px;
+    }
+    .slick-slide >div{
+        margin: 0 10%;
+        margin-top: 15%;
+    }
+    .slick-list{
+        margin: 0 5%;
+        margin-top: 1%;
+    }
+    .Head{
+        color:#fff;
+        font-size: 24px;
+        font-weight: bold;
+    }
+}

@@ -1,0 +1,136 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+.contact{
+  background: #25375F;
+  color: #fff;
+  padding: 10px 5px;
+  text-align: center;
+  font-size: 15px;
+}
+.contact b{
+  margin: 10px;
+}
+.navbar{
+  background: #14213D;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 9;
+}
+.navbar.fixed{
+  background: #25375F;
+  position: sticky;
+  top: 0;
+  transition: 0.3s ease-in-out;
+}
+.logo{
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+.logo span{
+  margin: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+nav a{
+  text-decoration: none;
+  color: #fff;
+  margin: 20px 20px;
+  padding: 10px;
+  border-radius: 15px;
+}
+nav a:hover{
+  color: #14213D;
+  background:  #c9d4eb;  
+}
+.dropdown{
+  border-radius: 15px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  /* padding: 20px; */
+  background: #fff;
+  width: 700px;
+  position: absolute;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  z-index: 9;
+}
+.dropup{
+  display: none;
+}
+.null{
+  display: none;
+}
+.cat, .subcat, .innersub{
+  border-radius: 15px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  margin: 10px;
+  width: 250px;
+}
+hr{
+  margin: 5px;
+}
+.cat a, .subcat a, .innersub a{
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  text-decoration: none;
+  color: #14213D;
+  cursor: pointer;
+}
+.cat a:hover, .subcat a:hover, .innersub a:hover{
+  background: #c9d4eb;  
+  border-radius: 15px;
+  font-weight: bolder;
+}
+.body{
+  min-height: 100%;
+  /* z-index: 8; */
+}
+.slider{
+  background: #c9d4eb;
+  /* z-index: 8; */
+  /* position: absolute;
+  top: 0; */
+  /* width: 100%;
+  height: calc(100vh-130px); */
+}
+.carousel img{
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  min-height: 500px;
+  min-width: 1000px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+.carousel a .carousel-control-prev-icon{
+  position: absolute;
+  left: 300px;
+}
+.carousel a .carousel-control-next-icon{
+  position: absolute;
+  right: 300px;
+}
+.carousel .carousel-indicators{
+  position: absolute;
+  bottom: 20px;
+}
+.carousel h3{
+  position: relative;
+  bottom: 10px;
+}
