@@ -98,10 +98,6 @@ hr{
   border-radius: 15px;
   font-weight: bolder;
 }
-.body{
-  min-height: 100%;
-  /* z-index: 8; */
-}
 .slider{
   background: #c9d4eb;
   /* z-index: 8; */
@@ -112,7 +108,7 @@ hr{
 }
 .carousel img{
   display: block;
-  margin: 20px auto;
+  margin: 40px auto;
   border-radius: 10px;
   min-height: 500px;
   min-width: 1000px;
@@ -128,9 +124,9 @@ hr{
 }
 .carousel .carousel-indicators{
   position: absolute;
-  bottom: 20px;
+  bottom: 30px;
 }
 .carousel h3{
   position: relative;
-  bottom: 10px;
+  bottom: 20px;
 }

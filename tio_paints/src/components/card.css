@@ -13,11 +13,11 @@
     font-size: 30px;
     font-weight: bold;   
 }
-.body{
+.card{
     text-align: center;
-    /* background-color: #c9d4eb; */
-    background-color: #14213D;
+    background-color: #c9d4eb;
     height: 100%;
+    border-radius: 0;
 }
 #card{
     margin-top: 2em;
@@ -39,7 +39,7 @@
     font-weight: bold;
     color:  #14213D;
 }
-.card:hover{
+#card:hover{
     transform: translateY(-60px);
 }
 .img{

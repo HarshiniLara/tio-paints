@@ -80,7 +80,7 @@ function slider(){
         ]
       };
     return(
-        <div className="body">
+        <div>
           <div className="Head">Our Products</div>
             <Slider {...settings}>
               {products.map((detail)=>(

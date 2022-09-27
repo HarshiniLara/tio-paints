@@ -44,7 +44,13 @@ function App() {
             }}}>{navItem.name}</a>)}    
         </nav> 
       </div>
-      <div className={dropdown?"dropdown":"dropup"}>
+      <div className={dropdown?"dropdown":"dropup"}
+        onMouseLeave={() => {
+          setDropdown(false);
+          setCategories([]);
+          setSubcategories([]);
+          setInnersub([]);
+        }}>
         <div className={Categories.child !== undefined?"cat":"null"}>
           {Categories.child !== undefined? Categories.child.map((subCategory)=>
             <div><a href="#" onMouseOver={() => 
@@ -62,16 +68,8 @@ function App() {
           {innerSub.child !== undefined?innerSub.child.map((sub) => <div><a href="#">{sub}</a><hr></hr></div>):<div />}
         </div>
       </div>
-      <div className="body"
-        onMouseOver={() => {
-          setDropdown(false);
-          setCategories([]);
-          setSubcategories([]);
-          setInnersub([]);
-        }}>
-        <div className="slider">
-          <Slider />
-        </div>
+      <div className="slider">
+        <Slider />
       </div>
       <div className="card">
         <Card />
