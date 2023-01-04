@@ -8,16 +8,14 @@ const Slider = () => {
             <Carousel className="carousel">
                 {Slides.map((slide) => (
                     <Carousel.Item interval={3000}>
-                        <img
-                            src={slide.img}
-                            className='sliderimg'
-                            height="500px"
-                            width="1000px"
-                            alt="First slide"
+                        <img src={slide.img}
+                            // className='sliderimg'
+                            // height="500px"
+                            // width="1000px"
                         />
-                        <Carousel.Caption>
+                        {/* <Carousel.Caption>
                             <h3>{slide.desc}</h3>
-                        </Carousel.Caption>
+                        </Carousel.Caption> */}
                     </Carousel.Item>
                 ))}  
             </Carousel>

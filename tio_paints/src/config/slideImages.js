@@ -1,18 +1,35 @@
 export const Slides = [
         {
-            "img": "Images/tiopaints.jpg",
-            "desc": "Product 1 description"
+            "img": "Images/img1.jpeg"
         },
         {
-            "img": "https://tse1.mm.bing.net/th?id=OIP.s-qGv4-3nNzYlyO2SLmHcAHaEo&pid=Api&P=0",
-            "desc": "Product 2 description"
+            "img": "Images/img2.jpeg"
         },
         {
-            "img": "http://cdn6.dissolve.com/p/D2115_244_655/D2115_244_655_600.jpg",
-            "desc": "Product 3 description"
+            "img": "Images/img3.jpeg"
         },
         {
-            "img": "https://tse1.mm.bing.net/th?id=OIP.WWcUl1h3p-dRmJfj-6njiQHaEK&pid=Api&P=0",
-            "desc": "Product 4 description"
+            "img": "Images/img4.jpeg"
+        },
+        {
+            "img": "Images/img5.jpeg"
+        },
+        {
+            "img": "Images/img6.jpeg"
+        },
+        {
+            "img": "Images/img7.jpeg"
+        },
+        {
+            "img": "Images/img8.jpeg"
+        },
+        {
+            "img": "Images/img9.jpeg"
+        },
+        {
+            "img": "Images/img10.jpeg"
+        },
+        {
+            "img": "Images/img11.jpeg"
         },
 ]

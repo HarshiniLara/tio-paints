@@ -24,16 +24,23 @@ function App() {
   return (
     <div className="App">
       <div className="contact">
-        {contact.map((cont) => <span>{cont.name}: {cont.child} <b>|</b></span>)}
+        <b>|</b>{contact.map((cont) => <span>{cont.name}: {cont.child} <b>|</b></span>)}
       </div>
       <div className={!stickyNav?"navbar":"navbar fixed"}>
         <div className="logo">
           <img src = "Images/tiopaints.jpg" width="90px" height="50px"></img>
           <span>TIO PAINTS</span>
         </div>
-        <nav>
+        <nav 
+          onMouseEnter = {() => {
+            setDropdown(true);
+            // setCategories(navItem);
+            setSubcategories([]);
+            setInnersub([]);
+          }}
+          onMouseLeave={() => setDropdown(false)}>
           {navItems.map((navItem)=><a href="#" 
-            onClick={()=>{
+            onMouseEnter={()=>{
               if(navItem.name==="HOME") 
                 setDropdown(false);
               else{
@@ -41,32 +48,34 @@ function App() {
               setCategories(navItem);
               setSubcategories([]);
               setInnersub([]);
-            }}}>{navItem.name}</a>)}    
+            }}}
+            // onMouseLeave={ () => setDropdown(false)}
+            >{navItem.name}</a>)}
+          <div className={dropdown?"dropdown":"dropup"}
+            onMouseEnter = {() => {
+              setDropdown(true);
+              // setCategories(navItem);
+              setSubcategories([]);
+              setInnersub([]);
+            }}>
+            <div className={Categories.child !== undefined?"cat":"null"}>
+              {Categories.child !== undefined? Categories.child.map((subCategory)=>
+                <div><a href="#" onMouseEnter={() => 
+                  {
+                    setSubcategories(subCategory);
+                    setInnersub([]);
+                  }
+                }>{subCategory.name}</a><hr></hr></div>
+                ):<div />}
+            </div>
+            <div className={subCategories.child !== undefined?"subcat":"null"}>
+              {subCategories.child !== undefined?subCategories.child.map((subCat) =><div><a href="#" onMouseEnter={() => setInnersub(subCat)}>{subCat.name}</a><hr></hr></div>):<div />}
+            </div>
+            <div className={innerSub.child !== undefined?"innersub":"null"}>
+              {innerSub.child !== undefined?innerSub.child.map((sub) => <div><a href="#">{sub}</a><hr></hr></div>):<div />}
+            </div>
+          </div>    
         </nav> 
-      </div>
-      <div className={dropdown?"dropdown":"dropup"}
-        onMouseLeave={() => {
-          setDropdown(false);
-          setCategories([]);
-          setSubcategories([]);
-          setInnersub([]);
-        }}>
-        <div className={Categories.child !== undefined?"cat":"null"}>
-          {Categories.child !== undefined? Categories.child.map((subCategory)=>
-            <div><a href="#" onMouseOver={() => 
-              {
-                setSubcategories(subCategory);
-                setInnersub([]);
-              }
-            }>{subCategory.name}</a><hr></hr></div>
-            ):<div />}
-        </div>
-        <div className={subCategories.child !== undefined?"subcat":"null"}>
-          {subCategories.child !== undefined?subCategories.child.map((subCat) =><div><a href="#" onMouseOver={() => setInnersub(subCat)}>{subCat.name}</a><hr></hr></div>):<div />}
-        </div>
-        <div className={innerSub.child !== undefined?"innersub":"null"}>
-          {innerSub.child !== undefined?innerSub.child.map((sub) => <div><a href="#">{sub}</a><hr></hr></div>):<div />}
-        </div>
       </div>
       <div className="slider">
         <Slider />
