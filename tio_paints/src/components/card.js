@@ -5,8 +5,9 @@ import Card from 'react-bootstrap/Card';
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import {products} from '../config/product.js';
-import './card.css';
+import { Link } from "react-router-dom";
+import { navItems } from '../config/navitems';
+import '../css/card.css';
 function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
@@ -80,21 +81,22 @@ function slider(){
         ]
       };
     return(
-        <div>
+        <div className="card">
           <div className="Head">Our Products</div>
             <Slider {...settings}>
-              {products.map((detail)=>(
+              {navItems.map((product)=> product.name!=="HOME"?
+              (
                 <Card style={{ width: '18rem' }} id='card'>
-                <img src={detail.image} className="img"></img>
+                <img src="./Images/set_2/constn_chemicals/Admixture/Tio_Proof.jpg" className="img"></img>
                 <Card.Body>
-                  <Card.Title id="heading">{detail.head}</Card.Title>
+                  <Card.Title id="heading">{product.name}</Card.Title>
                   <Card.Text className="text">
-                    {detail.text}
+                    We Support Some of the Biggest Training Organizations all over the World. We Serve all Time Zones
                   </Card.Text>
-                  <Button id="btn">Explore</Button>
+                  <Link to={product.route}><Button id="btn">Explore</Button></Link>
                 </Card.Body>
               </Card> 
-            ))}
+            ):null)}
             </Slider>  
         </div>
     )

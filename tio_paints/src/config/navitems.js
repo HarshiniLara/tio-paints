@@ -1,6 +1,6 @@
-const paintChildren = [
+const paints= [
     {
-        "name": "UNDERCOATS",
+        "name": "Undercoats",
         "child": [
             {
                 "name": "Wallputty",
@@ -10,23 +10,26 @@ const paintChildren = [
                 "name": "Primer",
                 "child": ["Tio Interior Primer", "Tio Maxx Exterior Primer", "Tio 2in1 Primer"]
             }
-        ]
+        ],
+        "route": "/paints/undercoats"
     },
     {
-        "name": "INTERIOR EMULSIONS",
+        "name": "Interior Emulsions",
         "child": [
             {
                 "name": "JAZZMI Interior Emulsion"
             }
-        ]
+        ],
+        "route": "/paints/interioremulsions"
     },
     {
-        "name": "EXTERIOR EMULSIONS",
+        "name": "Exterior Emulsions",
         "child": [
             {
                 "name": "MAXXPRO Exterior Emulsion"
             }
-        ]
+        ],
+        "route": "/paints/exterioremulsions"
     }
 ]
 const tilingSolutions = [
@@ -42,7 +45,8 @@ const tilingSolutions = [
             {
                 "name": "Tio Bond 303"
             }
-        ]
+        ],
+        "route": "/tilingsolutions/tileadhesives"
     },
     {
         "name": "Tile Grout",
@@ -56,10 +60,12 @@ const tilingSolutions = [
             {
                 "name": "Tio RoofTile Grout"
             }
-        ]
+        ],
+        "route": "/tilingsolutions/tilegrout"
     },
     {
-        "name": "Tile Cleaner"
+        "name": "Tile Cleaner",
+        "route": "/tilingsolutions/tilecleaner"
     }
 ]
 const constructionChemicals = [
@@ -69,7 +75,8 @@ const constructionChemicals = [
             {
                 "name": "TioLastick2k"
             }
-        ]
+        ],
+        "route": "/constructionchemicals/waterproofing"
     },
     {
         "name": "Bonding Agents",
@@ -80,7 +87,8 @@ const constructionChemicals = [
             {
                 "name": "Tio Bond EP"
             }
-        ]
+        ],
+        "route": "/constructionchemicals/bondingagents"
     },
     {
         "name": "Admixture",
@@ -88,7 +96,8 @@ const constructionChemicals = [
             {
                 "name": "Tio 222"
             }
-        ]
+        ],
+        "route": "/constructionchemicals/admixture"
     }
 ]
 const kitchenSinks = [
@@ -101,7 +110,8 @@ const kitchenSinks = [
             {
                 "name": "Glossy Ceramic Coating"
             }
-        ]
+        ],
+        "route": "/kitchensinks/glossyfinish"
     },
     {
         "name": "Matt Finish",
@@ -109,32 +119,44 @@ const kitchenSinks = [
             {
                 "name": "Matt Ceramic Coating"
             }
-        ]
+        ],
+        "route": "/kitchensinks/mattfinish"
     },
     {
-        "name": "Handmade Sinks"
+        "name": "Handmade Sinks",
+        "route": "/kitchensinks/handmadesinks"
     }
 ]
 
 export const navItems = [
-    {
-        "name": "HOME"
+    {   
+        key: 0,
+        "name": "HOME",
+        "route": "/"
     },
     {
+        key: 1,
         "name": "PAINTS",
-        "child": paintChildren
+        "child": paints,
+        "route": "/paints"
     },
     {
+        key: 2,
         "name": "TILING SOLUTIONS",
-        "child": tilingSolutions
+        "child": tilingSolutions,
+        "route": "/tilingsolutions"
     },
     {
+        key: 3,
         "name": "CONSTRUCTION CHEMICALS",
-        "child": constructionChemicals
+        "child": constructionChemicals,
+        "route": "/constructionchemicals"
     },
     {
+        key: 4,
         "name": "KITCHEN SINKS",
-        "child": kitchenSinks
+        "child": kitchenSinks,
+        "route": "/kitchensinks"
     }
 ]
 
